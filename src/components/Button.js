@@ -1,17 +1,17 @@
 import React from 'react';
 import classes from './Button.module.css';
 
-function Button(props, handler) {
+function Button({handler, value}) {
   return (
     <div
       className={
-        props.value === 'C' || props.value === '='
+        value === 'C' || value === '='
           ? `${classes.calcBtns} ${classes.res}`
           : `${classes.calcBtns}`
       }
-      onClick={() => handler(props.value)}
+      onClick={() => handler(value)}
     >
-      {props.value}
+      {value}
     </div>
   );
 }

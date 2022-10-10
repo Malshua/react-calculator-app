@@ -27,7 +27,7 @@ function Home() {
   ];
 
   const findVal = () => {
-    let result = eval('return ' + res)();
+    let result = eval(res);
     setRes(result.toString());
   };
 
